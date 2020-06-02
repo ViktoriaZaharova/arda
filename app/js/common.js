@@ -3,7 +3,7 @@ $('.main-slider').slick({
     dots: true,
     slidesToShow: 1,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000
 });
 
@@ -84,11 +84,7 @@ $("form").submit(function () {
     }).done(function () {
         $(this).find("input").val("");
         // alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-        $('#modalThanks').css('display', 'flex')
-            .animate({
-                opacity: 1,
-                top: '50%'
-            }, 200);
+        $('#modalThanks').addClass('show');
         $("form").trigger("reset");
     });
     return false;
@@ -110,3 +106,5 @@ $(window).on('load resize', function() {
         });
     }
 });
+
+$('[data-fancybox="photo"]').fancybox();

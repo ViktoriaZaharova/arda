@@ -197,6 +197,8 @@ h2 {
 
 .phone-mobile {
   display: none; }
+  .phone-mobile img {
+    width: 19px; }
 
 header {
   padding: 19px 0;
@@ -322,7 +324,11 @@ main {
     max-width: 384px; }
 
 .slick-slide {
-  outline: none; }
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .slick-slide:hover, .slick-slide:focus {
+    outline: none; }
 
 .title-description {
   font-size: 40px;
@@ -514,6 +520,9 @@ main {
   .advantages > * {
     position: relative;
     z-index: 1; }
+  .advantages h2 {
+    position: relative;
+    z-index: 1; }
 
 .advantages-wrapper {
   display: -webkit-box;
@@ -537,7 +546,7 @@ main {
     width: 100%;
     margin: 0 auto; }
   .advantages-box__icon {
-    margin: 0 auto 17px;
+    margin: 0 auto 22px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -548,6 +557,12 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .advantages-box__icon svg {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      fill: #012baf;
+      z-index: 1; }
     .advantages-box__icon:before {
       content: '';
       position: absolute;
@@ -561,24 +576,99 @@ main {
       background: transparent;
       -webkit-transition: .3s ease;
       transition: .3s ease; }
+    .advantages-box__icon:after {
+      content: '';
+      position: absolute; }
     .advantages-box__icon > * {
       position: relative;
       z-index: 1; }
+  .advantages-box:hover .advantages-box__icon svg {
+    fill: #fff; }
   .advantages-box:hover .advantages-box__icon img {
     -webkit-filter: brightness(0) invert(1);
             filter: brightness(0) invert(1); }
   .advantages-box:hover .advantages-box__icon:before {
     background-color: #012baf; }
+  .advantages-box:nth-child(1) .advantages-box__icon {
+    width: 76px;
+    height: 68px; }
+    .advantages-box:nth-child(1) .advantages-box__icon:after {
+      background: url("../img/1.png") no-repeat center;
+        background-size: contain;
+      width: 53px;
+      height: 124px;
+      right: -33px;
+      top: -16px; }
   .advantages-box:nth-child(2) {
     margin: 83px 30px 2px 0; }
+    .advantages-box:nth-child(2) .advantages-box__icon {
+      width: 87px;
+      height: 87px; }
+      .advantages-box:nth-child(2) .advantages-box__icon:after {
+        background: url("../img/2.png") no-repeat center;
+          background-size: contain;
+        width: 171px;
+        height: 54px;
+        right: -65px;
+        bottom: -22px; }
+  .advantages-box:nth-child(3) .advantages-box__icon {
+    width: 81px;
+    height: 81px; }
+    .advantages-box:nth-child(3) .advantages-box__icon:after {
+      background: url("../img/3.png") no-repeat center;
+        background-size: contain;
+      width: 53px;
+      height: 53px;
+      right: -37px;
+      top: -24px; }
   .advantages-box:nth-child(4) {
     margin: 74px 0 0 135px; }
+    .advantages-box:nth-child(4) .advantages-box__icon {
+      width: 111px;
+      height: 79px; }
+      .advantages-box:nth-child(4) .advantages-box__icon:after {
+        background: url("../img/4.png") no-repeat center;
+          background-size: contain;
+        width: 100px;
+        height: 77px;
+        right: -43px;
+        top: -12px; }
   .advantages-box:nth-child(5) {
     margin: 0 0 0 290px; }
+    .advantages-box:nth-child(5) .advantages-box__icon {
+      width: 87px;
+      height: 87px; }
+      .advantages-box:nth-child(5) .advantages-box__icon:after {
+        background: url("../img/5.png") no-repeat center;
+          background-size: contain;
+        width: 100px;
+        height: 77px;
+        left: -55px;
+        top: -12px; }
   .advantages-box:nth-child(6) {
-    margin: -25px 155px 0 485px; }
+    margin: -25px 155px 0 520px; }
+    .advantages-box:nth-child(6) .advantages-box__icon {
+      width: 85px;
+      height: 89px; }
+      .advantages-box:nth-child(6) .advantages-box__icon:after {
+        background: url("../img/6.png") no-repeat center;
+          background-size: contain;
+        width: 77px;
+        height: 77px;
+        left: -59px;
+        top: 8px; }
   .advantages-box:last-child {
-    margin: -120px 0 68px 250px; }
+    margin: -80px 0 68px 250px; }
+    .advantages-box:last-child .advantages-box__icon {
+      width: 86px;
+      height: 86px; }
+      .advantages-box:last-child .advantages-box__icon:after {
+        background: url("../img/7.png") no-repeat center;
+          background-size: contain;
+        width: 31px;
+        height: 124px;
+        right: -32px;
+        top: -41px; }
 
 .solution {
   position: relative;
@@ -655,108 +745,206 @@ main {
   font-weight: 500;
   -webkit-transition: .3s ease;
   transition: .3s ease;
-  position: relative;
-  overflow: hidden;
-  background: #fff; }
-  .solution-box:after {
+  position: relative; }
+  .solution-box:before {
     content: '';
     position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fff;
+    width: 264px;
+    height: 264px;
     -webkit-transition: .3s ease;
     transition: .3s ease; }
-  .solution-box .img-decor {
-    position: absolute; }
+  .solution-box .solution-box__icon {
+    position: absolute;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%; }
+    .solution-box .solution-box__icon span {
+      display: inline-block;
+      position: absolute; }
   .solution-box .price {
     color: #012bae;
     font-weight: 700;
     font-size: 36px; }
   .solution-box:hover {
-    font-size: 36px;
+    font-size: 34px;
     color: #fff;
-    font-weight: 700;
-    width: 300px;
-    height: 300px;
-    margin: 0 0 22px;
-    background: #012bae; }
+    font-weight: 700; }
+    .solution-box:hover:before {
+      width: 300px;
+      height: 300px;
+      background: #012bae; }
     .solution-box:hover .price {
       color: #fff; }
+    .solution-box:hover .solution-box__icon {
+      width: 300px;
+      height: 300px; }
+      .solution-box:hover .solution-box__icon:before, .solution-box:hover .solution-box__icon:after {
+        opacity: .15; }
   .solution-box > * {
     position: relative;
     z-index: 1; }
-  .solution-box:first-child:after {
+  .solution-box:first-child .solution-box__icon:before {
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    border: 10px solid #012bae;
+      border-radius: 50%;
+    top: 18px;
+    left: 44px; }
+  .solution-box:first-child .solution-box__icon span {
+    width: 264px;
+    height: 43px;
+    bottom: 2px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     background: url("../img/img1.png") no-repeat center;
-      background-size: contain;
-    bottom: 7px;
-    left: 44px;
-    width: 180px;
-    height: 238px; }
-  .solution-box:first-child:hover:after {
+      background-size: contain; }
+  .solution-box:first-child:hover .solution-box__icon span {
     background: url("../img/img1-hover.png") no-repeat center;
       background-size: contain;
     width: 302px;
-    height: 266px;
-    bottom: 5px;
-    left: 0; }
-  .solution-box:nth-child(2):after {
-    background: url("../img/img2.png") no-repeat center;
-      background-size: contain;
-    right: 0;
-    top: 0;
+    height: 63px;
+    bottom: 5px; }
+  .solution-box:first-child:hover .solution-box__icon:before {
+    top: 31px;
+    left: 63px;
+    border: 10px solid #ffffff; }
+  .solution-box:nth-child(2) .solution-box__icon:before {
+    content: '';
+    position: absolute;
     width: 112px;
-    height: 86px; }
-  .solution-box:nth-child(2):hover:after {
+    height: 112px;
+    border: 10px solid #012bae;
+      border-radius: 50%;
+    left: 152px;
+    bottom: 178px; }
+  .solution-box:nth-child(2):hover .solution-box__icon:before {
+    border: 10px solid #ffffff;
+    bottom: 203px;
+    left: 165px; }
+  .solution-box:nth-child(3) .solution-box__icon:after {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #012baf;
+    left: 138px;
+    bottom: 248px; }
+  .solution-box:nth-child(3) .solution-box__icon:before {
+    content: '';
+    position: absolute;
+    width: 237px;
+    height: 237px;
+    border: 10px solid #012bae;
+      border-radius: 50%;
+    bottom: 105px;
+    left: 171px; }
+  .solution-box:nth-child(3):hover .solution-box__icon:after {
+    top: 6px;
+    left: 152px;
+    background: #ffffff; }
+  .solution-box:nth-child(3):hover .solution-box__icon:before {
+    left: 185px;
+    bottom: 128px;
+    border: 10px solid #ffffff; }
+  .solution-box:nth-child(3):hover span {
+    width: 300px;
+    height: 55px;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     background: url("../img/img2-hover.png") no-repeat center;
-      background-size: contain;
-    width: 112px;
-    height: 99px; }
-  .solution-box:nth-child(3):after {
+      background-size: contain; }
+  .solution-box:nth-child(4) .solution-box__icon:before {
+    content: '';
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: #012bae;
+    top: 206px;
+    right: 55px; }
+  .solution-box:nth-child(4) .solution-box__icon span {
+    width: 90px;
+    height: 63px;
+    top: 34px;
+    left: 174px;
     background: url("../img/img3.png") no-repeat center;
-      background-size: contain;
-    right: 0;
-    top: 0;
-    width: 126px;
-    height: 159px; }
-  .solution-box:nth-child(3):hover:after {
+      background-size: contain; }
+  .solution-box:nth-child(4):hover .solution-box__icon:before {
+    background: #fff;
+    right: 77px;
+    top: 228px; }
+  .solution-box:nth-child(4):hover .solution-box__icon span {
     background: url("../img/img3-hover.png") no-repeat center;
       background-size: contain;
-    width: 257px;
-    height: 294px; }
-  .solution-box:nth-child(4):after {
+    top: 56px;
+    left: 190px; }
+  .solution-box:nth-child(5) .solution-box__icon:after {
+    content: '';
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    background: #012baf;
+    border-radius: 50%;
+    bottom: 201px;
+    left: 79px; }
+  .solution-box:nth-child(5) .solution-box__icon:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #012baf;
+    border-radius: 50%;
+    top: 36px;
+    right: 70px; }
+  .solution-box:nth-child(5):hover .solution-box__icon:after {
+    top: 9px;
+    left: 93px;
+    background: #fff; }
+  .solution-box:nth-child(5):hover .solution-box__icon:before {
+    background: #fff;
+    top: 60px;
+    right: 94px; }
+  .solution-box:nth-child(6) .solution-box__icon:before {
+    content: '';
+    position: absolute;
+    width: 153px;
+    height: 153px;
+    border: 10px solid #012bae;
+      border-radius: 50%;
+    left: 33px;
+    top: 214px; }
+  .solution-box:nth-child(6) .solution-box__icon span {
     background: url("../img/img4.png") no-repeat center;
       background-size: contain;
-    right: 0;
-    bottom: 0;
-    width: 135px;
-    height: 229px; }
-  .solution-box:nth-child(4):hover:after {
+    top: 0;
+    left: 123px;
+    width: 141px;
+    height: 50px; }
+  .solution-box:nth-child(6):hover .solution-box__icon span {
     background: url("../img/img4-hover.png") no-repeat center;
       background-size: contain;
-    width: 138px;
-    height: 245px; }
-  .solution-box:nth-child(5):after {
-    background: url("../img/img5.png") no-repeat center;
-      background-size: contain;
-    left: 28%;
-    top: 0;
-    width: 115px;
-    height: 63px; }
-  .solution-box:nth-child(5):hover:after {
-    background: url("../img/img5-hover.png") no-repeat center;
-      background-size: contain;
-    width: 115px;
-    height: 78px;
-    top: 9px; }
-  .solution-box:nth-child(6):after {
-    background: url("../img/img6.png") no-repeat center;
-      background-size: contain;
-    bottom: 0;
-    left: 58px;
-    width: 182px;
-    height: 244px; }
-  .solution-box:nth-child(6):hover:after {
-    background: url("../img/img6-hover.png") no-repeat center;
-      background-size: contain;
-    width: 216px;
-    height: 289px; }
+    width: 179px;
+    height: 63px;
+    top: 10px; }
+  .solution-box:nth-child(6):hover .solution-box__icon:before {
+    border-color: #fff;
+    top: 237px; }
 
 .advice {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#afafad), to(#989994));
@@ -930,6 +1118,9 @@ strong {
   width: 276px; }
 
 .gallery-box {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   cursor: pointer; }
@@ -938,9 +1129,13 @@ strong {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-  .gallery-box:hover {
+  .gallery-box:hover, .gallery-box:focus, .gallery-box:visited {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
+            transform: scale(1.1);
+    border: none;
+    outline: none; }
 
 .gallery-wrapper {
   display: -webkit-box;
@@ -1118,6 +1313,16 @@ strong {
     -webkit-transition: .3s ease;
     transition: .3s ease;
     margin: 0 12px 0 0; }
+    .checkbox .checkbox-custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #012baf;
+      border-radius: 2px; }
   .checkbox .label {
     display: inline-block;
     vertical-align: middle;
@@ -1126,14 +1331,8 @@ strong {
     font-size: 12px;
     font-family: "Exo 2", sans-serif; }
   .checkbox .checkbox-inp:checked + .checkbox-custom::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: #012baf; }
+    width: 0;
+    height: 0; }
 
 .links {
   color: #fff;
@@ -1958,9 +2157,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

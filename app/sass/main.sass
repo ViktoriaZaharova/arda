@@ -191,6 +191,8 @@ h2
 
 .phone-mobile
   display: none
+  img
+    width: 19px
 
 //header
 header
@@ -312,7 +314,9 @@ main
 
 .slick-slide
   outline: none
-
+  box-shadow: none
+  &:hover, &:focus
+    outline: none
 
 .title-description
   font-size: 40px
@@ -489,6 +493,9 @@ main
   >*
     position: relative
     z-index: 1
+  h2
+    position: relative
+    z-index: 1
 
 .advantages-wrapper
   display: flex
@@ -509,11 +516,17 @@ main
     width: 100%
     margin: 0 auto
   &__icon
-    margin: 0 auto 17px
+    margin: 0 auto 22px
     position: relative
     display: flex
     align-items: center
     justify-content: center
+    svg
+      width: 100%
+      height: 100%
+      display: inline-block
+      fill: $accent
+      z-index: 1
     &:before
       content: ''
       position: absolute
@@ -525,25 +538,103 @@ main
       height: 302px
       background: transparent
       transition: .3s ease
+    &:after
+      content: ''
+      position: absolute
+
     >*
       position: relative
       z-index: 1
   &:hover
     .advantages-box__icon
+      svg
+        fill: #fff
       img
         filter: brightness(0) invert(1)
       &:before
         background-color: $accent
+  &:nth-child(1)
+    .advantages-box__icon
+      width: 76px
+      height: 68px
+      &:after
+        background: url("../img/1.png") no-repeat center
+          size: contain
+        width: 53px
+        height: 124px
+        right: -33px
+        top: -16px
   &:nth-child(2)
     margin: 83px 30px 2px 0
+    .advantages-box__icon
+      width: 87px
+      height: 87px
+      &:after
+        background: url("../img/2.png") no-repeat center
+          size: contain
+        width: 171px
+        height: 54px
+        right: -65px
+        bottom: -22px
+  &:nth-child(3)
+    .advantages-box__icon
+      width: 81px
+      height: 81px
+      &:after
+        background: url("../img/3.png") no-repeat center
+          size: contain
+        width: 53px
+        height: 53px
+        right: -37px
+        top: -24px
   &:nth-child(4)
     margin: 74px 0 0 135px
+    .advantages-box__icon
+      width: 111px
+      height: 79px
+      &:after
+        background: url("../img/4.png") no-repeat center
+          size: contain
+        width: 100px
+        height: 77px
+        right: -43px
+        top: -12px
   &:nth-child(5)
     margin: 0 0 0 290px
+    .advantages-box__icon
+      width: 87px
+      height: 87px
+      &:after
+        background: url("../img/5.png") no-repeat center
+          size: contain
+        width: 100px
+        height: 77px
+        left: -55px
+        top: -12px
   &:nth-child(6)
-    margin: -25px 155px 0 485px
+    margin: -25px 155px 0 520px
+    .advantages-box__icon
+      width: 85px
+      height: 89px
+      &:after
+        background: url("../img/6.png") no-repeat center
+          size: contain
+        width: 77px
+        height: 77px
+        left: -59px
+        top: 8px
   &:last-child
-    margin: -120px 0 68px 250px
+    margin: -80px 0 68px 250px
+    .advantages-box__icon
+      width: 86px
+      height: 86px
+      &:after
+        background: url("../img/7.png") no-repeat center
+          size: contain
+        width: 31px
+        height: 124px
+        right: -32px
+        top: -41px
 
 //solution
 .solution
@@ -603,118 +694,228 @@ main
   font-weight: 500
   transition: .3s ease
   position: relative
-  overflow: hidden
-  background: #fff
-  &:after
+  &:before
     content: ''
     position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    background: #fff
+    width: 264px
+    height: 264px
     transition: .3s ease
-  .img-decor
+  .solution-box__icon
     position: absolute
+    transition: .3s ease
+    width: 100%
+    height: 100%
+    z-index: 1
+    overflow: hidden
+    border-radius: 50%
+    span
+      display: inline-block
+      position: absolute
   .price
     color: #012bae
     font-weight: 700
     font-size: 36px
   &:hover
-    font-size: 36px
+    font-size: 34px
     color: #fff
     font-weight: 700
-    width: 300px
-    height: 300px
-    margin: 0 0 22px
-    background: #012bae
+    &:before
+      width: 300px
+      height: 300px
+      background: #012bae
+
     .price
       color: #fff
+    .solution-box__icon
+      width: 300px
+      height: 300px
+      &:before, &:after
+        opacity: .15
   >*
     position: relative
     z-index: 1
   &:first-child
-    &:after
-      background: url("../img/img1.png") no-repeat center
-        size: contain
-      bottom: 7px
-      left: 44px
-      width: 180px
-      height: 238px
-    &:hover
-      &:after
-        background: url("../img/img1-hover.png") no-repeat center
+    .solution-box__icon
+      &:before
+        content: ''
+        position: absolute
+        width: 61px
+        height: 61px
+        border: 10px solid #012bae
+          radius: 50%
+        top: 18px
+        left: 44px
+      span
+        width: 264px
+        height: 43px
+        bottom: 2px
+        left: 50%
+        transform: translate(-50%,0)
+        background: url("../img/img1.png") no-repeat center
           size: contain
-        width: 302px
-        height: 266px
-        bottom: 5px
-        left: 0
-  &:nth-child(2)
-    &:after
-      background: url("../img/img2.png") no-repeat center
-        size: contain
-      right: 0
-      top: 0
-      width: 112px
-      height: 86px
     &:hover
+      .solution-box__icon
+
+        span
+          background: url("../img/img1-hover.png") no-repeat center
+            size: contain
+          width: 302px
+          height: 63px
+          bottom: 5px
+        &:before
+          top: 31px
+          left: 63px
+          border: 10px solid #ffffff
+  &:nth-child(2)
+    .solution-box__icon
+      &:before
+        content: ''
+        position: absolute
+        width: 112px
+        height: 112px
+        border: 10px solid #012bae
+          radius: 50%
+        left: 152px
+        bottom: 178px
+    &:hover
+      .solution-box__icon
+        &:before
+          border: 10px solid #ffffff
+          bottom: 203px
+          left: 165px
+  &:nth-child(3)
+    .solution-box__icon
       &:after
+        content: ''
+        position: absolute
+        width: 23px
+        height: 23px
+        border-radius: 50%
+        background: $accent
+        left: 138px
+        bottom: 248px
+      &:before
+        content: ''
+        position: absolute
+        width: 237px
+        height: 237px
+        border: 10px solid #012bae
+          radius: 50%
+        bottom: 105px
+        left: 171px
+    &:hover
+      .solution-box__icon
+        &:after
+          top: 6px
+          left: 152px
+          background: #ffffff
+        &:before
+          left: 185px
+          bottom: 128px
+          border: 10px solid #ffffff
+      span
+        width: 300px
+        height: 55px
+        bottom: 0
+        left: 50%
+        transform: translate(-50%,0)
         background: url("../img/img2-hover.png") no-repeat center
           size: contain
-        width: 112px
-        height: 99px
-  &:nth-child(3)
-    &:after
-      background: url("../img/img3.png") no-repeat center
-        size: contain
-      right: 0
-      top: 0
-      width: 126px
-      height: 159px
-    &:hover
-      &:after
-        background: url("../img/img3-hover.png") no-repeat center
-          size: contain
-        width: 257px
-        height: 294px
   &:nth-child(4)
-    &:after
-      background: url("../img/img4.png") no-repeat center
-        size: contain
-      right: 0
-      bottom: 0
-      width: 135px
-      height: 229px
-    &:hover
-      &:after
-        background: url("../img/img4-hover.png") no-repeat center
+    .solution-box__icon
+      &:before
+        content: ''
+        position: absolute
+        width: 84px
+        height: 84px
+        border-radius: 50%
+        background: #012bae
+        top: 206px
+        right: 55px
+      span
+        width: 90px
+        height: 63px
+        top: 34px
+        left: 174px
+        background: url("../img/img3.png") no-repeat center
           size: contain
-        width: 138px
-        height: 245px
+    &:hover
+      .solution-box__icon
+        &:before
+          background: #fff
+          right: 77px
+          top: 228px
+        span
+          background: url("../img/img3-hover.png") no-repeat center
+            size: contain
+          top: 56px
+          left: 190px
   &:nth-child(5)
-    &:after
-      background: url("../img/img5.png") no-repeat center
-        size: contain
-      left: 28%
-      top: 0
-      width: 115px
-      height: 63px
-    &:hover
+    .solution-box__icon
       &:after
-        background: url("../img/img5-hover.png") no-repeat center
-          size: contain
-        width: 115px
+        content: ''
+        position: absolute
+        width: 78px
         height: 78px
-        top: 9px
-  &:nth-child(6)
-    &:after
-      background: url("../img/img6.png") no-repeat center
-        size: contain
-      bottom: 0
-      left: 58px
-      width: 182px
-      height: 244px
+        background: $accent
+        border-radius: 50%
+        bottom: 201px
+        left: 79px
+      &:before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 20px
+        background: $accent
+        border-radius: 50%
+        top: 36px
+        right: 70px
     &:hover
-      &:after
-        background: url("../img/img6-hover.png") no-repeat center
+      .solution-box__icon
+        &:after
+          top: 9px
+          left: 93px
+          background: #fff
+        &:before
+          background: #fff
+          top: 60px
+          right: 94px
+
+  &:nth-child(6)
+    .solution-box__icon
+      &:before
+        content: ''
+        position: absolute
+        width: 153px
+        height: 153px
+        border: 10px solid #012bae
+          radius: 50%
+        left: 33px
+        top: 214px
+      span
+        background: url("../img/img4.png") no-repeat center
           size: contain
-        width: 216px
-        height: 289px
+        top: 0
+        left: 123px
+        width: 141px
+        height: 50px
+    &:hover
+      .solution-box__icon
+        span
+          background: url("../img/img4-hover.png") no-repeat center
+            size: contain
+          width: 179px
+          height: 63px
+          top: 10px
+        &:before
+          border-color: #fff
+          top: 237px
+
 
 //advice
 .advice
@@ -876,14 +1077,20 @@ strong
   width: 276px
 
 .gallery-box
+  border: none
+  box-shadow: none
   transition: .3s ease
   cursor: pointer
   img
     width: 100%
     height: 100%
     object-fit: cover
-  &:hover
+  &:hover, &:focus, &:visited
+    box-shadow: none
     transform: scale(1.1)
+    border: none
+    outline: none
+
 
 .gallery-wrapper
   display: flex
@@ -1033,6 +1240,16 @@ strong
     cursor: pointer
     transition: .3s ease
     margin: 0 12px 0 0
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background: $accent
+      border-radius: 2px
   .label
     display: inline-block
     vertical-align: middle
@@ -1043,14 +1260,8 @@ strong
       family: $default-font
   .checkbox-inp:checked + .checkbox-custom
     &::before
-      content: ""
-      display: block
-      position: absolute
-      width: 100%
-      height: 100%
-      left: 0
-      top: 0
-      background: $accent
+      width: 0
+      height: 0
 
 .links
   color: #fff
