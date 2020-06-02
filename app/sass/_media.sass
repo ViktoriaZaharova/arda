@@ -28,7 +28,7 @@
     width: 350px
     height: 350px
     top: -170px
-    left: 0
+    left: -20px
 
   .header-logo:after
     left: 54px
@@ -65,6 +65,9 @@
 
   .gallery:before
     left: -500px
+
+  .logo-decor
+    left: -180px
 
 
 @media only screen and (max-width : 1360px)
@@ -133,6 +136,8 @@
         background: $accent
         border: none
 
+  .navbar-expand-xl .navbar-nav .nav-link
+    padding: 17px 38px
 
   .header-logo
     margin: 0 auto 0 -27px
@@ -196,8 +201,6 @@
   .advice h2
     margin: 0 0 80px
 
-  .section-instagramm:before
-    left: 0
 
   .footer-top
     padding: 14px 0 17px
@@ -227,10 +230,10 @@
 
   .main-slider__image
     max-width: 500px
+    height: 580px
 
   .logo-decor
-    width: 210px
-    height: 185px
+    display: none
 
   .video-section
     height: 730px
@@ -328,15 +331,18 @@
   .inst-photo
     height: 100px
 
-  .section-instagramm:before
-    height: 135px
-    left: -334px
-
   .line-title .circle-bg
     right: -140px
     top: -291px
     width: 486px
     height: 486px
+    &:before
+      bottom: 93px
+      left: -335px
+      background: url("../img/dots10.png") no-repeat center
+        size: contain
+      width: 529px
+      height: 117px
 
   .line-title
     align-items: flex-start
@@ -419,29 +425,28 @@
   .solution-box
     margin: 0 0 10px
 
-  .gallery-wrapper
-    height: auto
-
-  .gallery-box__max
-    display: none
-
-  .gallery-box__min.flex-column
-    width: 100%
-
-  .gallery-box__min
-    .gallery-box
-      display: none
-      width: 100%
-      height: auto
-      &:first-child
-        display: flex
-
   .gallery
     padding: 71px 0 39px
 
   .close
     right: 0
     top: -34px
+
+  .gallery-slider__mobile
+    display: block
+    width: 100%
+
+  .gallery-slider
+    display: none
+
+  .gallery-box
+    width: 277px
+    margin: 0 auto
+    height: 276px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
 
 
   
@@ -470,7 +475,7 @@
   .footer-bottom__wrapper
     flex-direction: column
     align-items: flex-start
-    padding: 24px 15px 170px
+    padding: 24px 15px
 
   .footer-text
     margin: 0 0 26px

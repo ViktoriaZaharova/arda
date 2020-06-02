@@ -33,7 +33,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex align-items-center">
-                <a href="index.html" class="logo header-logo"><img src="img/logo2.gif" alt=""></a>
+                <a href="index.html" class="logo header-logo"><img src="img/logo.gif" alt=""></a>
 
 
                 <nav class="navbar navbar-expand-xl">
@@ -44,16 +44,16 @@
 
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">о нас</a>
+                                <a class="nav-link go_to" href="#about">о нас</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">преимущества</a>
+                                <a class="nav-link go_to" href="#advantages">преимущества</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">решения</a>
+                                <a class="nav-link go_to" href="#solution">решения</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">контакты</a>
+                                <a class="nav-link go_to" href="#contacts">контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
 
                 <button class="btn btn-accent" data-toggle="modal" data-target="#modalCallback">Заказать звонок</button>
 
-                <a href="tel:+79289295588" class="phone-mobile"><img src="img/phone.png" alt=""></a>
+                <a href="tel:+79289295588" class="phone-mobile"><img src="img/phone.svg" alt=""></a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -81,12 +81,13 @@
 </header>
 
 <main>
-    <div class="logo-decor"><img src="img/logo-decor.png" alt=""></div>
+
     <div class="main-slider">
         <div class="slide">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-10">
+                        <div class="logo-decor"><img src="img/logo-decor.png" alt=""></div>
                         <div class="main-slider__content">
                             <div class="slide-title">Производство
                                 оборудования
@@ -111,6 +112,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-10">
+                        <div class="logo-decor"><img src="img/logo-decor.png" alt=""></div>
                         <div class="main-slider__content">
                             <div class="slide-title">Производство
                                 оборудования
@@ -136,6 +138,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-10">
+                        <div class="logo-decor"><img src="img/logo-decor.png" alt=""></div>
                         <div class="main-slider__content">
                             <div class="slide-title">Производство
                                 оборудования
@@ -161,6 +164,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-10">
+                        <div class="logo-decor"><img src="img/logo-decor.png" alt=""></div>
                         <div class="main-slider__content">
                             <div class="slide-title">Производство
                                 оборудования
@@ -184,15 +188,14 @@
     </div>
 </main>
 
-<div class="video-section">
+<div class="video-section" id="about">
 
     <img src="img/bg-video.jpg" alt="" class="video-poster">
-    <iframe src="https://www.youtube.com/embed/DxreDZuvV04"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-
+    <iframe id="iframe-video" src="https://www.youtube.com/embed/DxreDZuvV04" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
     <div class="playpause"></div>
 
 </div>
+
 
 <section class="sales-section">
     <div class="logo-decor">
@@ -232,7 +235,7 @@
     </div>
 </section>
 
-<section class="advantages">
+<section class="advantages" id="advantages">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -286,7 +289,7 @@
     </div>
 </section>
 
-<section class="solution">
+<section class="solution" id="solution">
     <div class="container">
         <div class="row">
             <div class="solution-img wow animate__backInRight animate__animated"><img src="img/bg2.png" alt=""></div>
@@ -320,7 +323,7 @@
             </div>
 
             <div class="col-12">
-                <a href="#" class="btn btn-accent">Узнать больше</a>
+                <button class="btn btn-accent" data-toggle="modal" data-target="#modalCallback">Узнать больше</button>
             </div>
         </div>
     </div>
@@ -462,14 +465,44 @@
 
                     <div class="slide">
                         <div class="gallery-wrapper">
-                            <div class="gallery-box gallery-box__max"><img src="img/gallery1.jpg" alt=""></div>
+                            <div class="gallery-box gallery-box__max"><img src="img/gallery7.jpg" alt=""></div>
                             <div class="gallery-box__min flex-column">
-                                <div class="gallery-box"><img src="img/gallery2.jpg" alt=""></div>
-                                <div class="gallery-box"><img src="img/gallery3.jpg" alt=""></div>
+                                <div class="gallery-box"><img src="img/gallery8.jpg" alt=""></div>
+                                <div class="gallery-box"><img src="img/gallery9.jpg" alt=""></div>
                             </div>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="gallery-slider__mobile">
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery2.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery3.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery4.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery5.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery6.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery7.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery8.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery9.jpg" alt=""></div>
+                    </div>
+                    <div class="slide">
+                        <div class="gallery-box"><img src="img/gallery10.jpg" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -481,27 +514,27 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="line-title">
-                    <img src="img/instagramm.png" alt="" class="title-icon">
+                <a href="https://www.instagram.com/arda_car_wash_equipment/" class="line-title">
+                    <img src="img/instagram-white.svg" alt="" class="title-icon">
                     <h2>Мы в Instagram</h2>
 
                     <div class="circle-bg wow animate__zoomIn animate__animated"></div>
-                </div>
+                </a>
             </div>
 
             <div class="col-12 section-instagramm__wrapper">
-                <a href="#" class="inst-photo"><img src="img/inst1.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst2.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst3.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst4.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst5.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst6.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst7.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst8.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst9.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst10.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst11.jpg" alt=""></a>
-                <a href="#" class="inst-photo"><img src="img/inst12.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst1.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst2.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst3.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst4.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst5.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst6.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst7.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst8.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst9.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst10.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst11.jpg" alt=""></a>
+                <a href="https://www.instagram.com/arda_car_wash_equipment" class="inst-photo"><img src="img/inst12.jpg" alt=""></a>
             </div>
         </div>
     </div>
@@ -523,7 +556,7 @@
                     <form method="post" class="form wow animate__backInUp animate__animated">
                         <label class="form-group">
                             <input type="text" class="form-control" placeholder="Ваше имя" name="name">
-                            <span class="form-icon"><img src="img/user.png" alt=""></span>
+                            <span class="form-icon"><img src="img/user.svg" alt=""></span>
                         </label>
 
                         <label class="form-group">
@@ -548,7 +581,7 @@
     </div>
 </section>
 
-<footer>
+<footer id="contacts">
     <div class="footer-top">
         <div class="container">
             <div class="row">
@@ -564,13 +597,13 @@
 
                     <div class="footer-contacts">
                         <div class="footer-contacts__box">
-                            <div class="icon"><img src="img/location.png" alt=""></div>
+                            <div class="icon"><img src="img/location.svg" alt=""></div>
                             <p>г. Ставрополь <br>
                                 ул. Кулакова 16В</p>
                         </div>
 
                         <div class="footer-contacts__box">
-                            <div class="icon"><img src="img/interface.png" alt=""></div>
+                            <div class="icon"><img src="img/file.svg" alt=""></div>
                             <p>ОГРН: 12354745132156468465 <br>
                                 ИНН: 12354745132156468465</p>
                         </div>
@@ -589,9 +622,9 @@
                     <div class="box-social">
                         <p>Мы в соцсетях:</p>
                         <ul class="list-social">
-                            <li><a href="#"><img src="img/viber.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/instagramm.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/viber.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/facebook.svg" alt=""></a></li>
+                            <li><a href="https://www.instagram.com/arda_car_wash_equipment"><img src="img/instagram-white.svg" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
@@ -613,7 +646,7 @@
                     </div>
                     <div class="footer-text">
                         <p>Разрабокта сайта:</p>
-                        <a href="#" class="links">Вебагрегатор</a>
+                        <a href="https://webagregator.ru" target="_blank" class="links">Вебагрегатор</a>
                     </div>
 
                 </div>
@@ -622,7 +655,6 @@
     </div>
 </footer>
 
-<button class="btn btn-accent" data-toggle="modal" data-target="#modalThanks">Спасибо</button>
 
 <!-- Modal -->
 <div class="modal fade" id="modalCallback" tabindex="-1" role="dialog"
@@ -653,7 +685,7 @@
 
                     <label class="form-group">
                         <input type="text" class="form-control" placeholder="Ваше имя*" name="name" required>
-                        <span class="form-icon"><img src="img/user.png" alt=""></span>
+                        <span class="form-icon"><img src="img/user.svg" alt=""></span>
                     </label>
 
                     <label class="form-group">
@@ -717,6 +749,7 @@
         crossorigin="anonymous"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="js/jquery.inputmask.js"></script>
 <script src="js/common.js"></script>
 
 </body>

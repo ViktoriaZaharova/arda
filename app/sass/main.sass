@@ -135,7 +135,7 @@ button, .btn
     height: 453px
     background: #012baf
     border-radius: 50%
-    left: -29px
+    left: -50px
     top: -258px
   >*
     position: relative
@@ -147,8 +147,9 @@ button, .btn
     height: 48px
     background: url("../img/dots1.png") no-repeat center
       size: contain
-    left: 110px
+    left: 95px
     bottom: -34px
+    z-index: 1
   img
     max-width: 318px
     margin: -30px 0 0 0
@@ -179,6 +180,9 @@ h2
     margin: 0 0 5px
     &:last-child
       margin: 0
+
+.navbar-expand-xl .navbar-nav .nav-link
+  padding: 0
 
 .menu-close
   display: none
@@ -219,12 +223,12 @@ header
     left: 0
     top: 50%
     transform: translate(0,-50%)
-    background: url("../img/phone.png") no-repeat center
+    background: url("../img/phone.svg") no-repeat center
       size: 19px
     transition: .3s ease
   &:hover
     &:before
-      background: #012baf url("../img/phone.png") no-repeat center
+      background: #012baf url("../img/phone.svg") no-repeat center
         size: 19px
       border-color: #012baf
 
@@ -284,8 +288,8 @@ main
   width: 419px
   height: 370px
   position: absolute
-  bottom: 185px
-  left: 198px
+  bottom: 27px
+  left: -180px
 
 .slide-title
   font-size: 90px
@@ -321,6 +325,16 @@ main
   width: 100%
   bottom: 0
   right: 0
+  height: 800px
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  border-radius: 80px 0 0 0
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .main-slider__content
   position: relative
@@ -729,7 +743,7 @@ main
   h2
     margin: 0 0 86px
   .btn
-    margin: 0 350px 67px auto
+    margin: 0 auto 67px
   .trigger
     margin: 0 0 67px auto
 
@@ -814,6 +828,7 @@ strong
   h2
     position: relative
     padding: 0 0 0 673px
+
   .container
     max-width: 1160px
 
@@ -821,6 +836,7 @@ strong
   width: 100%
   margin: 50px 0 0
 
+.gallery
   .slick-dots
     bottom: 0
     margin: 29px 0 0
@@ -837,6 +853,10 @@ strong
       margin: 0 21px 0 0
       &:last-child
         margin: 0
+
+.gallery-slider__mobile
+  display: none
+  margin: 47px 0 0
 
 .gallery-box__min
   width: 100%
@@ -893,7 +913,7 @@ strong
   right: -56px
   background: url("../img/arrow-right.png") no-repeat center
     size: contain
-  &:hover
+  &:hover, &:focus
     background: url("../img/arrow-right.png") no-repeat center
       size: contain
 
@@ -901,7 +921,7 @@ strong
   left: -56px
   background: url("../img/arrow-left.png") no-repeat center
     size: contain
-  &:hover
+  &:hover, &:focus
     background: url("../img/arrow-left.png") no-repeat center
       size: contain
 
@@ -912,16 +932,7 @@ strong
   color: #fff
   padding: 124px 0 62px
   overflow: hidden
-  &:before
-    content: ''
-    position: absolute
-    left: 540px
-    top: 0
-    width: 529px
-    height: 107px
-    background: url("../img/dots8.png") repeat-x center
-      size: contain
-    z-index: 1
+
 
 .line-title
   width: 100%
@@ -930,6 +941,7 @@ strong
   justify-content: flex-end
   margin: 0 0 52px
   position: relative
+  color: #fff
   .circle-bg
     position: absolute
     width: 721px
@@ -938,10 +950,23 @@ strong
     border-radius: 50%
     top: -450px
     right: -102px
+
+    &:before
+      content: ''
+      background: url("../img/dots11.png") no-repeat center
+        size: contain
+      position: absolute
+      bottom: 295px
+      left: -343px
+      width: 529px
+      height: 90px
+
   h2
     width: auto
     position: relative
     z-index: 1
+  &:hover
+    color: #fff
 
 .title-icon
   margin: 0 29px 0 0
@@ -1087,7 +1112,7 @@ label
 //footer
 .footer-bottom
   background: #0f1426
-  padding: 30px 0 235px
+  padding: 30px 0
   color: #8e96b2
   font-size: 14px
   font-weight: 300
@@ -1188,6 +1213,9 @@ footer
     margin: 0 20px 0 0
 
 .footer-menu
+  display: flex
+  flex-direction: column
+  align-items: flex-start
   li
     margin: 0 0 10px
     &:last-child
@@ -1195,8 +1223,9 @@ footer
     a
       color: #fff
       font-weight: 500
-
       text-transform: uppercase
+      &:hover
+        border-bottom: 1px dotted #fff
 
 //modal
 .modal-backdrop
