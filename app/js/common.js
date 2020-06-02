@@ -83,8 +83,7 @@ $("form").submit(function () {
         data: $(this).serialize()
     }).done(function () {
         $(this).find("input").val("");
-        // alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-        $('#modalThanks').addClass('show');
+        $('#modalThanks').modal();
         $("form").trigger("reset");
     });
     return false;

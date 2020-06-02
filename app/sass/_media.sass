@@ -414,8 +414,7 @@
     max-width: 100%
     overflow: hidden
     margin: 8px 0 0
-    height: 100%
-    max-height: 370px
+    height: 374px
     right: 0
     img
       width: 100%
@@ -511,16 +510,16 @@
     margin: auto
 
   #modalThanks .modal-content
-    padding: 69px 32px 68px
+    padding: 69px 32px 0
 
   #modalThanks
     .modal-body
-      padding: 38px 0 0
+      padding: 38px 0 68px
     .description
       font-size: 18px
 
   .modal-content
-    padding: 28px 20px 27px
+    padding: 28px 20px 0
 
   .modal-header
     margin: 0 auto
@@ -539,7 +538,7 @@
     text-align: left
 
   .modal-body
-    padding: 20px 0 0
+    padding: 20px 0 27px
 
   .modal-dialog-scrollable .modal-content
     overflow: hidden
@@ -583,20 +582,26 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
+    flex-direction: row
     flex-wrap: wrap
     margin: 0 0 19px
     li
       width: 50%
       &:last-child
         margin: 0 0 10px
+      a
+        width: fit-content
 
+  .footer-text
+    &:last-child
+      display: flex
+      align-items: center
+    .links
+      display: inline
+      margin: 0 0 0 2px
 
 
 @media only screen and (max-width : 360px)
-  .main-slider__image
-    height: 100%
-    max-height: 210px
-
   .advice:after
     background: url("../img/women-bg2-mob.png") no-repeat center
       size: cover

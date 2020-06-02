@@ -1331,14 +1331,17 @@ label
   color: #8e96b2
   font-size: 14px
   font-weight: 300
-  a
+  .links
     text-decoration: underline
+    color: #8e96b2
+  a
     color: #8e96b2
 
 .footer-text
   max-width: 500px
   &:last-child
     text-align: right
+
 
 .footer-bottom__wrapper
   display: flex
@@ -1453,7 +1456,7 @@ footer
 .modal-content
   border: none
     radius: 10px
-  padding: 37px 46px
+  padding: 37px 46px 0
   color: #7a7a7a
   background: #eceef4
   .description
@@ -1496,7 +1499,7 @@ footer
   color: $accent
 
 .modal-body
-  padding: 50px 0 0
+  padding: 50px 0 37px
 
 .necessarily
   padding: 0 0 0 44px
@@ -1513,6 +1516,8 @@ footer
   right: -26px
   top: -26px
   opacity: 1
+  &:hover, &:focus
+    border: none
 
 .modal-header .close
   padding: 0
@@ -1526,7 +1531,7 @@ footer
     max-width: 554px
 
   .modal-content
-    padding: 94px 50px 92px
+    padding: 94px 50px 0
     position: relative
     &:before
       content: ''
@@ -1538,7 +1543,7 @@ footer
       background: url("../img/line-modal.png") no-repeat center
         size: 100%
   .modal-body
-    padding: 37px 0 0
+    padding: 37px 0 92px
   .description
     margin: 0
 
