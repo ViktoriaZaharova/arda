@@ -1,11 +1,12 @@
 $('.main-slider').slick({
-    arrows: false,
     dots: true,
     slidesToShow: 1,
     fade: true,
     autoplay: true,
     infinite: true,
-    autoplaySpeed: 1000
+    autoplaySpeed: 1000,
+    prevArrow: '<button type="button" class="slick-prev"><img src="../img/arrow-left.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../img/arrow-right.png" alt=""></button>',
 });
 
 $('.gallery-slider').slick({
