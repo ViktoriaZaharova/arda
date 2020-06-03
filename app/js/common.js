@@ -4,7 +4,8 @@ $('.main-slider').slick({
     slidesToShow: 1,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    infinite: true,
+    autoplaySpeed: 1000
 });
 
 $('.gallery-slider').slick({
@@ -37,7 +38,7 @@ $('.playpause').click(function () {
 });
 
 // show list all
-$('.btn-load').on('click', function(e){
+$('.btn-load').on('click', function (e) {
     e.preventDefault();
 
     var
@@ -45,7 +46,7 @@ $('.btn-load').on('click', function(e){
         content = $(this).parents('.advice').find('.advice-line');
 
 
-    if(!$this.hasClass('trigger')){
+    if (!$this.hasClass('trigger')) {
         $this.addClass('trigger');
         $this.html('Скрыть текст');
 
@@ -83,13 +84,21 @@ $("form").submit(function () {
         data: $(this).serialize()
     }).done(function () {
         $(this).find("input").val("");
+        $('.modal').modal('hide');
         $('#modalThanks').modal();
+
+        setTimeout(function(){
+            $('#modalThanks').modal('hide');
+        }, 4000);
+
         $("form").trigger("reset");
     });
     return false;
 });
 
-$(window).on('load resize', function() {
+
+
+$(window).on('load resize', function () {
     if ($(window).width() < 1199) {
         $('.go_to').click(function () {
             var scroll_el = $(this).attr('href');

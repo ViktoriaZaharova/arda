@@ -1456,7 +1456,7 @@ footer {
   footer .btn {
     width: 196px;
     height: 52px;
-    margin: 0 0 0 auto; }
+    margin: 0 auto; }
 
 .footer-top {
   padding: 61px 0 52px; }
@@ -1641,7 +1641,10 @@ footer {
   top: -26px;
   opacity: 1; }
   .close:hover, .close:focus {
-    border: none; }
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none; }
 
 .modal-header .close {
   padding: 0;
@@ -1820,7 +1823,13 @@ footer {
   .inst-photo {
     width: 15%; }
   .main-slider__image {
-    right: -140px; } }
+    right: -140px; }
+  .close {
+    right: 10px;
+    top: 20px; }
+    .close img {
+      -webkit-filter: invert(1);
+              filter: invert(1); } }
 
 @media only screen and (max-width: 1040px) {
   .advantages {

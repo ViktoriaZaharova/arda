@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "steellive@yandex.ru"; //заменить на свой почтовый ящик
+$recepient = "info@arda-tech.ru"; //заменить на свой почтовый ящик
 $sitename = "ARDA - Производство оборудования";
 
 $name = trim($_POST["name"]);
